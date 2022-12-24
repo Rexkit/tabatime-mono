@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
+import Theme from '@components/Theme';
+import Router from '@pages/router';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+import GlobalStyles from '@styles/global.styles';
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="frontend" />
-    </StyledApp>
+    <Theme>
+      <Router>
+        <GlobalStyles />
+      </Router>
+    </Theme>
   );
 }
 

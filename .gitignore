@@ -37,3 +37,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/mongo-data
+
+*.env
+mongo-password.txt
+mongo-username.txt

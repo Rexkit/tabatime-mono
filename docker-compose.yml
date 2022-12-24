@@ -1,0 +1,23 @@
+version: '3.6'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: /run/secrets/mongo-username
+      MONGO_INITDB_ROOT_PASSWORD: /run/secrets/mongo-password
+    ports:
+      - 27018:27017
+    volumes:
+      - ./mongo-data:/data/db
+    secrets:
+      - mongo-username
+      - mongo-password
+
+secrets:
+  mongo-username:
+    file: mongo-username.txt
+
+  mongo-password:
+    file: mongo-password.txt

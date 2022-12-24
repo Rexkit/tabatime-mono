@@ -4,7 +4,17 @@
     "allowJs": false,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/app/components/*"],
+      "@app-types/*": ["src/app/types/*"],
+      "@styles/*": ["src/app/styles/*"],
+      "@hooks/*": ["src/app/hooks/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@/*": ["src/app/*"]
+    }
   },
   "files": [],
   "include": [],
