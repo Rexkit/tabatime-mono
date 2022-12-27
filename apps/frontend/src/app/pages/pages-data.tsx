@@ -1,12 +1,18 @@
 import { IRouter } from '@app-types/router.types';
 
-import Authenticate from './Authenticate';
+import Login from './login';
+import Register from './register';
 
 const pagesData: IRouter[] = [
   {
-    title: 'authenticate',
-    path: '/auth',
-    element: <Authenticate />,
+    title: 'login',
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    title: 'register',
+    path: '/register',
+    element: <Register />,
   },
 ];
 

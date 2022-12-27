@@ -1,4 +1,4 @@
-import Theme from '@components/Theme';
+import Theme from '@components/theme';
 import Router from '@pages/router';
 
 import GlobalStyles from '@styles/global.styles';

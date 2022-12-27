@@ -13,6 +13,8 @@ module.exports = (config, context) => {
         '@styles': path.resolve(__dirname, 'src/app/styles'),
         '@hooks': path.resolve(__dirname, 'src/app/hooks'),
         '@pages': path.resolve(__dirname, 'src/app/pages'),
+        '@layouts': path.resolve(__dirname, 'src/app/layouts'),
+        '@features': path.resolve(__dirname, 'src/app/features'),
         '@': path.resolve(__dirname, 'src/app'),
       },
     },

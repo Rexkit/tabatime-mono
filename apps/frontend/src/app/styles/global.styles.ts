@@ -61,4 +61,8 @@ export default createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+
+  :root {
+    font-family: 'Montserrat', sans-serif;
+  }
 `;

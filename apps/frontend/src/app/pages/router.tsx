@@ -1,8 +1,10 @@
 import { FC, PropsWithChildren } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { IRouter } from '@app-types/router.types';
+
+import AppLayout from '@layouts/app-layout/app-layout.component';
 
 import pagesData from './pages-data';
+import { IRouter } from '@app-types/router.types';
 
 const Router: FC<PropsWithChildren> = ({ children }) => {
   const pageRoutes = pagesData.map(({ title, path, element }: IRouter) => (
@@ -12,7 +14,11 @@ const Router: FC<PropsWithChildren> = ({ children }) => {
   return (
     <BrowserRouter>
       {children}
-      <Routes>{pageRoutes}</Routes>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          {pageRoutes}
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };

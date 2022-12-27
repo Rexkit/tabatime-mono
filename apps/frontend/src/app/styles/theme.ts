@@ -10,7 +10,10 @@ export const baseTheme: ITheme = {
     danger: '#f44336 ',
 
     bg: '#E5E4E8',
+    bgAlt: '',
     font: '#19191B',
+    fontWhite: '#E5E4E8',
+    fontDark: '#19191B',
   },
 
   media: {
@@ -23,9 +26,9 @@ export const baseTheme: ITheme = {
   // in px
   sizes: {
     header: { height: 56 },
-    container: { width: 1200 },
+    container: { width: 540 },
     footer: { height: 128 },
-    modal: { width: 540 },
+    modal: { width: 320 },
   },
 
   // in ms
@@ -57,6 +60,7 @@ export const darkTheme: DefaultTheme = {
   colors: {
     ...baseTheme.colors,
     bg: '#19191B',
+    bgAlt: '#1d1d20',
     font: '#E5E4E8',
   },
 };

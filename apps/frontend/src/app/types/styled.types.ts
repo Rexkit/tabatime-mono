@@ -11,7 +11,10 @@ export interface ITheme {
     danger: string;
 
     bg: string;
+    bgAlt: string;
     font: string;
+    fontWhite: string;
+    fontDark: string;
   };
 
   media: {

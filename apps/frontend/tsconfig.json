@@ -13,6 +13,8 @@
       "@styles/*": ["src/app/styles/*"],
       "@hooks/*": ["src/app/hooks/*"],
       "@pages/*": ["src/app/pages/*"],
+      "@layouts/*": ["src/app/layouts/*"],
+      "@features/*": ["src/app/features/*"],
       "@/*": ["src/app/*"]
     }
   },
