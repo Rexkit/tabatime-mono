@@ -1,4 +1,23 @@
+import { IUser } from '@features/users/types';
+
 export interface IGenericResponse {
-  status: string;
+  success: boolean;
   message: string;
+}
+
+export interface ILoginRequest {
+  username: string;
+  password: string;
+}
+
+export interface ILoginResponse {
+  accessToken: string;
+  expiresIn: string;
+  user: IUser;
+}
+
+export interface IRegisterRequest {
+  username: string;
+  password: string;
+  email: string;
 }

@@ -41,7 +41,7 @@ export class AuthService {
     const token = this._createToken(user); // Генерируем токен
     return {
       // Возвращаем данные
-      username: user.username,
+      user,
       ...token,
     };
   }

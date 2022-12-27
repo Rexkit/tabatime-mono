@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const FormInputGroup = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const activeLabel = css`
@@ -16,7 +17,29 @@ export const FormLabelElement = styled.label`
   transition: transform ${({ theme }) => theme.durations.ms300}ms ease;
 `;
 
-export const FormInputElement = styled.input`
+export const FormErrorMessage = styled.p`
+  position: absolute;
+  bottom: 2px;
+  right: 20px;
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.danger};
+`;
+
+interface IFormInputElementProps {
+  hasError: boolean;
+}
+
+const invalidField = css`
+  background: linear-gradient(
+      to right,
+      ${({ theme }) => theme.colors.bgAlt} 95%,
+      ${({ theme }) => theme.colors.danger} 95%
+    )
+    no-repeat;
+`;
+
+export const FormInputElement = styled.input<IFormInputElementProps>`
+  position: relative;
   border: 0;
   border-radius: 5px;
   width: 250px;
@@ -33,4 +56,6 @@ export const FormInputElement = styled.input`
   &:not(:placeholder-shown) + ${FormLabelElement} {
     ${activeLabel}
   }
+
+  ${({ hasError }) => hasError && invalidField}
 `;

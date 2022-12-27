@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
-import { PrimaryButton, SecondaryButton } from './button.styles';
+import { ButtonSpinner, PrimaryButton, SecondaryButton } from './button.styles';
 
 export enum BUTTON_TYPE_CLASSES {
   primary = 'primary',
@@ -28,7 +28,7 @@ const Button: FC<IButton> = ({
 
   return (
     <CustomButton disabled={isLoading} {...restProps}>
-      {children}
+      {isLoading ? <ButtonSpinner /> : children}
     </CustomButton>
   );
 };

@@ -8,9 +8,20 @@ export const AppLayoutContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: center;
 `;
 
 export const AppLayoutFrame = styled.div`
-  max-width: ${({ theme }) => theme.sizes.container.width}px;
+  width: ${({ theme }) => theme.sizes.container.width}px;
+  height: 100%;
   margin: 2rem;
+`;
+
+export const ContentContainer = styled.div`
+  height: calc(100vh - 88px);
+  transform: translateY(-44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

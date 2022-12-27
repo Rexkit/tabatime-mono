@@ -1,3 +1,4 @@
+import { SpinnerContainer } from '@components/spinner/spinner.styles';
 import styled from 'styled-components';
 
 export const PrimaryButton = styled.button`
@@ -28,4 +29,9 @@ export const PrimaryButton = styled.button`
 
 export const SecondaryButton = styled(PrimaryButton)`
   background-color: ${({ theme }) => theme.colors.secondary};
+`;
+
+export const ButtonSpinner = styled(SpinnerContainer)`
+  width: 30px;
+  height: 30px;
 `;
